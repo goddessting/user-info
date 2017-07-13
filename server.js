@@ -17,6 +17,8 @@ app.get("*", function (req, res) {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
-app.listen(3000, () => {
-    console.log('server start');
+app.listen(3001, () => {
+    console.log('server start, listening is 3001');
 });
+
+module.exports = app;
