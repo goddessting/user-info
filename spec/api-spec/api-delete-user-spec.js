@@ -3,7 +3,6 @@
 let request = require('supertest');
 
 let app = require('../../server');
-let db = require('../../db/connection');
 
 describe('test delete user', function () {
     let user;

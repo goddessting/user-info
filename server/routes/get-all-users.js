@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
 
-let db = require('.././db/connection');
+let db = require('../connection');
 
-let userSQL = require('../db/usersql');
+let userSQL = require('../usersql');
 
 router.get('/', (req, res) => {
     db.query(userSQL.queryAll, function (err, result) {

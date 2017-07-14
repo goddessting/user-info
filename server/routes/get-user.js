@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
 
-let db = require('.././db/connection');
+let db = require('../connection');
 
-let userSQL = require('../db/usersql');
+let userSQL = require('../usersql');
 
 router.post('/getUserById', (req, res) => {
     db.query(userSQL.queryById, req.body.id, function (err, result) {

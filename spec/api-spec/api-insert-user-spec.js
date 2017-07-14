@@ -3,8 +3,8 @@
 let request = require('supertest');
 
 let app = require('../../server');
-let userSQL = require('../../db/usersql');
-let db = require('../../db/connection');
+let userSQL = require('../.././server/usersql');
+let db = require('../.././server/connection');
 
 describe('test insert users', function () {
     let user;
