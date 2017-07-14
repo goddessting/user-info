@@ -5,7 +5,7 @@ let db = require('../connection');
 
 let userSQL = require('../usersql');
 
-router.get('/', (req, res) => {
+router.get('/getUsers', (req, res) => {
     db.query(userSQL.queryAll, function (err, result) {
         if (err) return err;
 
