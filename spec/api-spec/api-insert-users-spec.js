@@ -21,7 +21,7 @@ describe('test insert users', function () {
         };
     });
 
-    afterEach(function() {
+    afterEach(function () {
         db.query(userSQL.deleteByUsername, user.username);
     });
 

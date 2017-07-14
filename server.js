@@ -12,10 +12,12 @@ app.use(express.static(__dirname + '/'));
 const insertUser = require('./routes/insert-users');
 const getAllUsers = require('./routes/get-all-users');
 const deleteUser = require('./routes/delete-user');
+const getUser = require('./routes/get-user');
 
 app.use("/", getAllUsers);
 app.use("/", insertUser);
 app.use("/", deleteUser);
+app.use("/", getUser);
 
 app.get("*", function (req, res) {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
