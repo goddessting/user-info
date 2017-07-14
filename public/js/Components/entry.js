@@ -10,8 +10,9 @@ import App from './app';
 import GetUsers from '../Containers/get-users';
 
 import getUsersMiddleware from '../Middlewares/get-users-middleware';
+import deleteUserMiddleware from '../Middlewares/delete-user-middleware';
 
-const createMiddlewareStore = applyMiddleware(getUsersMiddleware)(createStore);
+const createMiddlewareStore = applyMiddleware(getUsersMiddleware, deleteUserMiddleware)(createStore);
 const store = createMiddlewareStore(reducer);
 
 render(<Provider store={store}>

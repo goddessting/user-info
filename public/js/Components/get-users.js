@@ -5,6 +5,20 @@ export default class GetUsers extends React.Component {
         this.props.onDisplayUsers();
     }
 
+    deleteUser(id){
+        this.props.onDeleteUser({id});
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.deleteFlag === true) {
+            alert("删除成功！");
+            this.props.onDisplayUsers();
+        } else if (nextProps.deleteFlag === false) {
+            alert("删除失败！");
+            this.props.onDisplayUsers();
+        }
+    }
+
     render() {
         const usersList = this.props.users.map((user, i)=> {
             return <div key={i}>
@@ -19,6 +33,12 @@ export default class GetUsers extends React.Component {
                         <td className="col">{user.telephone}</td>
                         <td className="col">{user.email}</td>
                         <td className="col">{user.other}</td>
+
+                        <td className="col seat-col">
+                        <span className="glyphicon glyphicon-trash"
+                              onClick={this.deleteUser.bind(this, user.id)}/>
+                        </td>
+
                     </tr>
                     </tbody>
                 </table>
