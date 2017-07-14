@@ -3,13 +3,15 @@
 let request = require('supertest');
 
 let app = require('../../server');
+let userSQL = require('../../db/usersql');
+let db = require('../../db/connection');
 
 describe('test insert users', function () {
     let user;
 
     beforeEach(function () {
         user = {
-            username: 'tingbaobao',
+            username: 't',
             name: 'tingbaobao',
             age: 22,
             sex: 'nv',
@@ -17,6 +19,10 @@ describe('test insert users', function () {
             email: '1766153116@qq.com',
             other: ''
         };
+    });
+
+    afterEach(function() {
+        db.query(userSQL.deleteByUsername, user.username);
     });
 
     it('insert successfully', function (done) {
@@ -28,3 +34,4 @@ describe('test insert users', function () {
             .expect(200, done);
     });
 });
+
