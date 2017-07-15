@@ -4,7 +4,7 @@ let UserSQL = {
     update:'UPDATE User SET USERNAME=?, NAME=?, AGE=?, SEX=?, TELEPHONE=?, EMAIL=?, OTHER=? WHERE id=?',
     delete: 'DELETE FROM User WHERE id=?',
     deleteByUsername: 'DELETE FROM User WHERE username=?',
-    queryById: 'SELECT * FROM User WHERE id=?',
+    queryByUsername: 'SELECT * FROM User WHERE username=?',
 };
 
 module.exports = UserSQL;

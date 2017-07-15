@@ -6,8 +6,8 @@ const mapStateToProps = (state) => {
         users: state.getUsers.users,
         deleteFlag: state.getUsers.deleteFlag,
         addFlag: state.getUsers.addFlag,
-        updateFlag:state.getUsers.updateFlag
-
+        updateFlag:state.getUsers.updateFlag,
+        searchUserData: state.searchUser.searchUserData,
     }
 };
 

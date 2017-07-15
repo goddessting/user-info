@@ -8,12 +8,12 @@ describe('test get user by id', function () {
     let user;
 
     beforeEach(function () {
-        user = {id: "22"};
+        user = {username: "22"};
     });
 
     it('get successfully', function (done) {
         request(app)
-            .post('/getUserById')
+            .post('/searchUser')
             .set('Accept', 'application/json')
             .send(user)
             .expect('Content-Type', /json/)

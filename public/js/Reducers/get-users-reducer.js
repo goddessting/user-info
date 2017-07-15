@@ -10,10 +10,12 @@ export default (state = {users: [], deleteFlag: '', addFlag: '', updateFlag: ''}
 
     if (action.type === 'DELETE_USER_FLAG') {
 
-        if (action.data === 'success') {
-            state.deleteFlag = true;
-        } else {
-            state.deleteFlag = false;
+        switch (action.data) {
+            case 'success':
+                state.deleteFlag = true;
+                break;
+            default:
+                state.deleteFlag = false;
         }
 
         return Object.assign({}, state);
@@ -21,21 +23,27 @@ export default (state = {users: [], deleteFlag: '', addFlag: '', updateFlag: ''}
 
     if (action.type === 'ADD_USER_FLAG') {
 
-        if (action.data === 'success') {
-            state.addFlag = true;
-        } else {
-            state.addFlag = false;
+        switch (action.data) {
+            case 'success':
+                state.addFlag = true;
+                break;
+            default:
+                state.addFlag = false;
         }
+
         return Object.assign({}, state);
     }
 
     if (action.type === 'UPDATE_USER_FLAG') {
 
-        if (action.data === 'success') {
-            state.updateFlag = true;
-        } else {
-            state.updateFlag = false;
+        switch (action.data) {
+            case 'success':
+                state.updateFlag = true;
+                break;
+            default:
+                state.updateFlag = false;
         }
+
         return Object.assign({}, state);
     }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import {browserHistory} from 'react-router';
 
 require('../.././css/modal.css');
 
@@ -18,11 +19,11 @@ export default class GetUsers extends React.Component {
     }
 
     componentWillMount() {
-        this.props.onDisplayUsers();
+        this.props.onSearchUser({username: 'a'});
     }
 
     deleteUser(id) {
-        this.props.onDeleteUser({id});
+        this.props.onDeleteSearchUser({id});
     }
 
     addUser() {
@@ -34,16 +35,16 @@ export default class GetUsers extends React.Component {
         let email = this.refs.emailAdd.value.trim();
         let other = this.refs.otherAdd.value.trim();
 
-        if (!username || !name || !age || !sex || !telephone || !email) {
+        if (!username || !name || !name || !age || !sex || !telephone || !email) {
             alert("添加用户时时除其他外，所有项不能为空!");
             return;
         }
 
-        this.props.onAddUser({username, name, age, sex, telephone, email, other});
+        this.props.onAddSearchUser({username, name, age, sex, telephone, email, other});
     }
 
     _onModifyUser() {
-        this.props.onModifyUser({
+        this.props.onModifySearchUser({
             id: this.state.id,
             username: this.state.username,
             name: this.state.name,
@@ -113,31 +114,31 @@ export default class GetUsers extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.deleteFlag === true) {
             alert("删除成功！");
-            this.props.onDisplayUsers();
+            browserHistory.push(`/getUsers`);
         } else if (nextProps.deleteFlag === false) {
             alert("删除失败！");
-            this.props.onDisplayUsers();
+            browserHistory.push(`/getUsers`);
         }
 
         if (nextProps.addFlag === true) {
             alert("添加成功！");
-            this.props.onDisplayUsers();
+            browserHistory.push(`/getUsers`);
         } else if (nextProps.addFlag === false) {
             alert("添加失败！");
-            this.props.onDisplayUsers();
+            browserHistory.push(`/getUsers`);
         }
 
         if (nextProps.updateFlag === true) {
             alert("修改成功！");
-            this.props.onDisplayUsers();
+            browserHistory.push(`/getUsers`);
         } else if (nextProps.updateFlag === false) {
             alert("修改失败！");
-            this.props.onDisplayUsers();
+            browserHistory.push(`/getUsers`);
         }
     }
 
     render() {
-        const usersList = this.props.users.map((user, i)=> {
+        const usersList = this.props.searchUserData.map((user, i)=> {
             return <div key={i}>
                 <hr/>
                 <table>
