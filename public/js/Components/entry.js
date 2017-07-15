@@ -12,8 +12,9 @@ import GetUsers from '../Containers/get-users';
 import getUsersMiddleware from '../Middlewares/get-users-middleware';
 import deleteUserMiddleware from '../Middlewares/delete-user-middleware';
 import addUserMiddleware from '../Middlewares/add-user-middleware';
+import updateUserMiddlleware from '../Middlewares/modify-user-middleware';
 
-const createMiddlewareStore = applyMiddleware(getUsersMiddleware, deleteUserMiddleware, addUserMiddleware)(createStore);
+const createMiddlewareStore = applyMiddleware(getUsersMiddleware, deleteUserMiddleware, addUserMiddleware, updateUserMiddlleware)(createStore);
 const store = createMiddlewareStore(reducer);
 
 render(<Provider store={store}>

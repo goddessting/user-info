@@ -5,7 +5,9 @@ const mapStateToProps = (state) => {
     return {
         users: state.getUsers.users,
         deleteFlag: state.getUsers.deleteFlag,
-        addFlag: state.getUsers.addFlag
+        addFlag: state.getUsers.addFlag,
+        updateFlag:state.getUsers.updateFlag
+
     }
 };
 
@@ -21,6 +23,10 @@ const mapDispatchToProps = (dispatch) => {
 
         onAddUser: (user) => {
             dispatch({type: "ADD_USER", user});
+        },
+
+        onModifyUser: (user) => {
+            dispatch({type: "UPDATE_USER", user});
         }
     }
 };
