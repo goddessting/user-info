@@ -19,7 +19,7 @@ export default class GetUsers extends React.Component {
     }
 
     componentWillMount() {
-        this.props.onSearchUser({username: 'a'});
+        this.props.onSearchUser({username: location.search.split('=')[1]});
     }
 
     deleteUser(id) {

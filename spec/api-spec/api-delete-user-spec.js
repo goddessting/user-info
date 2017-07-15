@@ -8,7 +8,7 @@ describe('test delete user', function () {
     let user;
 
     beforeEach(function () {
-        user = {id: "5"};
+        user = {id: 5};
     });
 
     it('delete successfully', function (done) {
