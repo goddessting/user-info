@@ -14,6 +14,7 @@
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "cors": "^2.8.4",
+    "css-loader": "^0.28.4",
     "express": "^4.15.3",
     "jasmine": "^2.6.0",
     "mysql": "latest",
@@ -21,6 +22,7 @@
     "react-redux": "^5.0.5",
     "react-router": "^3.00",
     "redux": "^3.7.2",
+    "style-loader": "^0.18.2",
     "superagent": "^3.5.2",
     "supertest": "^3.0.0"
   },
@@ -33,6 +35,7 @@
     "babel-preset-react": "^6.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "style-loader": "^0.18.2",
     "webpack": "^2.6.1"
   },
   "description": "please run  ``` npm install ``` then  ``` nodemon server.js ``` open postman with 'http://localhost:3000/insertUser', if you see 'User added to database with ID: 0', you succeed!  open postman with 'http://localhost:3000/', if you see such as ' [                                                                      {                                                                          \"username\": \"tingbaobao\",                                                                          \"name\": \"tingbaobao\",                                                                          \"age\": 22,                                                                          \"sex\": \"?\",                                                                          \"telephone\": \"15829348754\",                                                                          \"email\": \"1766153116@qq.com\",                                                                          \"other\": \"\"                                                                      },                                                                      {                                                                          \"username\": \"tingbaobao\",                                                                          \"name\": \"tingbaobao\",                                                                          \"age\": 22,                                                                          \"sex\": \"nv\",                                                                          \"telephone\": \"15829348754\",                                                                          \"email\": \"1766153116@qq.com\",                                                                          \"other\": \"\"                                                                      }                                                                  ] ', you succeed!",

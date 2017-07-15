@@ -4,7 +4,8 @@ import GetUsers from '../Components/get-users';
 const mapStateToProps = (state) => {
     return {
         users: state.getUsers.users,
-        deleteFlag: state.getUsers.deleteFlag
+        deleteFlag: state.getUsers.deleteFlag,
+        addFlag: state.getUsers.addFlag
     }
 };
 
@@ -16,6 +17,10 @@ const mapDispatchToProps = (dispatch) => {
 
         onDeleteUser: (id) => {
             dispatch({type: "DELETE_USER", id});
+        },
+
+        onAddUser: (user) => {
+            dispatch({type: "ADD_USER", user});
         }
     }
 };

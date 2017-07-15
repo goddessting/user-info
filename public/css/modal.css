@@ -1,0 +1,35 @@
+.modal-body{
+    left: 150px;
+}
+
+.margin{
+    margin-top: 10px;
+}
+
+.name, .age, .sex, .email, .other{
+    margin-left: 27px;
+}
+
+.username{
+    margin-left: 13px;
+}
+
+table{
+    margin-left: 50px;
+}
+
+.col-th{
+    width: 150px;
+}
+
+.col-other{
+    width: 180px;
+}
+
+.col{
+    width: 150px;
+}
+
+hr{
+    margin: 0;
+}
