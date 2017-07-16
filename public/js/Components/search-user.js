@@ -169,6 +169,12 @@ export default class GetUsers extends React.Component {
         });
 
         return <div>
+            <div className="add-div">
+                <button className="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    添加用户
+                </button>
+            </div>
+
             <hr/>
             <table>
                 <tbody>
@@ -189,9 +195,6 @@ export default class GetUsers extends React.Component {
                 {usersList}
                 <hr/>
             </div>
-            <button className="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                添加用户
-            </button>
 
             <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel"
                  aria-hidden="true">

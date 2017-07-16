@@ -26,7 +26,8 @@ describe('test update users', function () {
             .set('Accept', 'application/json')
             .send(user)
             .expect('Content-Type', /json/)
-            .expect(200, done);
+            .expect(200)
+            .expect({tip: "success"}, done);
     });
 });
 

@@ -19,7 +19,7 @@ table{
 }
 
 .col-th{
-    width: 150px;
+    width: 140px;
 }
 
 .col-other{
@@ -30,6 +30,31 @@ table{
     width: 150px;
 }
 
-hr{
+.title{
+    background-color: #0b97c4;
     margin: 0;
+    height: 70px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.search{
+    margin-top: 11px;
+    margin-left: 800px;
+    border-radius: 1px;
+}
+
+.btn{
+    height: 30px;
+    margin-top: 10px;
+}
+
+.add-div{
+    display: inline;
+    margin-left: 30px;
+}
+
+.search-div{
+    display: inline;
+    float: left;
 }

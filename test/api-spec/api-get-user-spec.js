@@ -4,20 +4,19 @@ let request = require('supertest');
 
 let app = require('../../server');
 
-describe('test delete user', function () {
+describe('test get user by id', function () {
     let user;
 
     beforeEach(function () {
-        user = {id: 5};
+        user = {username: "22"};
     });
 
-    it('delete successfully', function (done) {
+    it('get successfully', function (done) {
         request(app)
-            .post('/deleteUser')
+            .post('/getUser')
             .set('Accept', 'application/json')
             .send(user)
             .expect('Content-Type', /json/)
             .expect(200, done);
     });
 });
-

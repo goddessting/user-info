@@ -31,7 +31,7 @@ describe('test insert users', function () {
             .set('Accept', 'application/json')
             .send(user)
             .expect('Content-Type', /json/)
-            .expect(200, done);
+            .expect(200,{tip: "success"}, done);
     });
 });
 
