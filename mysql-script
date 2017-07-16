@@ -1,0 +1,25 @@
+USE USER;
+
+CREATE TABLE User
+(
+id INT auto_increment primary key,
+username varchar(255)  NOT NULL,
+name varchar(255)  NOT NULL,
+age INT NOT NULL DEFAULT 0,
+sex varchar(4)  NOT NULL,
+telephone varchar(255)  NOT NULL,
+email varchar(255)  NOT NULL,
+other varchar(255)  NOT NULL,
+UNIQUE (username)
+)
+
+alter table User convert to character set utf8;
+
+INSERT INTO User(username,name,age,sex,telephone,email,other) VALUES('葶寳寳','李婷婷',22,'女','1582934875
+','1766153116@qq.com','西安邮电大学大三学生');
+
+INSERT INTO User(username,name,age,sex,telephone,email,other) VALUES('三三','张三',22,'女','1582934875
+','1766153116@qq.com','西安邮电大学大三学生');
+
+INSERT INTO User(username,name,age,sex,telephone,email,other) VALUES('思思','李四',22,'男','1582934875
+','1766153116@qq.com','西安邮电大学大三学生');
