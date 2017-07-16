@@ -2,11 +2,13 @@ please run
 ```
 npm install
 
+npm run webpack
+
 npm start
 ```
-then,operate with postman.
+then,open 'http://localhost:3000/';
 
 if you want to test, please run
 ```
-jasmine
+npm run test
 ```
