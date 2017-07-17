@@ -22,7 +22,7 @@ describe('test insert users', function () {
     });
 
     afterEach(function () {
-        db.query(userSQL.deleteByUsername, user.username);
+        db.query(userSQL.deleteByUsername, 't');
     });
 
     it('insert successfully', function (done) {
