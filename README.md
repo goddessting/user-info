@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/goddessting/user-info.svg?branch=master)](https://travis-ci.org/goddessting/user-info.svg?branch=master)
+
+
 please run 
 ```
 npm install
