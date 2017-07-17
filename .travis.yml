@@ -7,3 +7,9 @@ install:
     - npm install
 test:
     - npm run test
+services:
+    - mysql
+
+before_install:
+    - mysql -e 'CREATE DATABASE IF NOT EXISTS USER;'
+
