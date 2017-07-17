@@ -12,5 +12,5 @@ services:
 
 before_install:
     - mysql -e 'CREATE DATABASE IF NOT EXISTS USER;'
-    - mysql -e 'use user;create table user('tingbaobao',''litingting', 22, 'nv',  15829348754, '1766153116@qq.com', '')'
+    - mysql -e 'use USER;create table User('tingbaobao',''litingting', 22, 'nv',  15829348754, '1766153116@qq.com', '')'
 
